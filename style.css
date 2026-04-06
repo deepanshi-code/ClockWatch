@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+
+  background: linear-gradient(135deg, #1e1b4b, #0f172a);
+  color: white;
+
+  transition: 0.4s;
+}
+
+/* 🌞 LIGHT MODE (FIXED - softer, not harsh) */
+body.light {
+  background: linear-gradient(135deg, #ad8eec, #9d75ed);
+  color: #111;
+}
+
+/* CARD */
+.container {
+  width: 340px;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  box-shadow: 
+    0 10px 30px rgba(0,0,0,0.4),
+    0 0 10px rgba(168,85,247,0.1);
+
+  transition: 0.4s;
+}
+
+/* LIGHT CARD */
+body.light .container {
+  background: rgba(227, 223, 223, 0.65);
+  backdrop-filter: blur(20px);
+
+  box-shadow: 
+    0 10px 25px rgba(0,0,0,0.1),
+    0 0 15px rgba(99,102,241,0.15);
+}
+
+/* TITLE */
+h1 {
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+
+  transition: 0.3s;
+}
+
+/* TIME TEXT */
+.real-time, .end-time {
+  font-size: 13px;
+  margin: 4px 0;
+  opacity: 0.85;
+}
+
+/* INPUTS */
+.inputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.inputs input {
+  width: 60px;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+
+  background: rgba(0,0,0,0.4);
+  color: white;
+
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Input focus glow */
+.inputs input:focus {
+  box-shadow: 0 0 6px #a855f7;
+}
+
+/* LIGHT INPUT */
+body.light .inputs input {
+  background: white;
+  color: black;
+}
+
+/* BUTTONS */
+button {
+  padding: 10px 18px;
+  margin: 8px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  background: linear-gradient(45deg, #6366f1, #a855f7);
+  color: white;
+
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(168,85,247,0.5);
+}
+
+/* CIRCLE */
+.circle {
+  position: relative;
+  margin: 25px auto;
+  width: 220px;
+}
+
+svg {
+  transform: rotate(-90deg);
+}
+
+/* BACK RING */
+.bg {
+  fill: none;
+  stroke: rgba(255,255,255,0.2);
+  stroke-width: 10;
+}
+
+/* PROGRESS */
+#progress {
+  fill: none;
+  stroke: #8b5cf6;
+  stroke-width: 10;
+  stroke-linecap: round;
+
+  transition: stroke-dashoffset 1s linear;
+  filter: drop-shadow(0 0 6px #a855f7);
+}
+
+/* TIME TEXT */
+#timeText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* THEME BUTTON */
+.theme-btn {
+  position: fixed;
+  top: 30px;
+  right: 20px;
+
+  padding: 15px 17px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(45deg, #6366f1, #a855f7);
+  color: white;
+
+  transition: 0.3s;
+}
+
+.theme-btn:hover {
+  transform: scale(1.1);
+}
+
+/* MODE BUTTON */
+.mode-btn {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+
+  background: linear-gradient(45deg, #8922c5, #4b3385);
+  color: black;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.mode-btn:hover {
+  transform: scale(1.1);
+}
+
+/* HIDDEN */
+.hidden {
+  display: none;
+}
+
+/* STOPWATCH */
+#stopwatchDisplay {
+  font-size: 28px;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.mode-btn{
+  size: 150%;
+}
